@@ -4,7 +4,8 @@
 import re as re
 import numpy as np
 import time
-import zipcode
+#import zipcode
+import zipcodes
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -13,6 +14,20 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 
+def zipcodes_list(st_items):
+    # If st_items is a single zipcode string.
+    if isinstance(st_items, str):
+        zc_objects = zipcodes.matching(st_items)
+    # If st_items is a list of zipcode strings.
+    elif isinstance(st_items, list):
+        zc_objects = [n for i in st_items for n in zipcodes.matching(str(i))]
+    else:
+        raise ValueError("arg 'st_items' must be of type str or list")
+
+    output = [str(i).split(" ", 1)[1].split(">")[0] for i in zc_objects]
+    return(output)
+
+'''
 def zipcodes_list(st_items):
     # If st_items is a single zipcode string.
     if isinstance(st_items, str):
@@ -25,6 +40,7 @@ def zipcodes_list(st_items):
     
     output = [str(i).split(" ", 1)[1].split(">")[0] for i in zc_objects]
     return(output)
+'''
 
 def init_driver(file_path):
     # Starting maximized fixes https://github.com/ChrisMuir/Zillow/issues/1

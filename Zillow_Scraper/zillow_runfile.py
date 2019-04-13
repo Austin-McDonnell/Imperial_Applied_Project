@@ -19,7 +19,7 @@ Software requirements/info:
 
 import time
 import pandas as pd
-import Zillow.zillow_functions as zl
+import zillow_functions as zl
 
 # Create list of search terms.
 # Function zipcodes_list() creates a list of US zip codes that will be 
@@ -36,10 +36,10 @@ import Zillow.zillow_functions as zl
 # end up missing most of the results.
 # Param st_items can be either a list of zipcode strings, or a single zipcode 
 # string.
-st = zl.zipcodes_list(st_items = ["100", "770"])
+st = zl.zipcodes_list(st_items = ["48201", "48202"])
 
 # Initialize the webdriver.
-driver = zl.init_driver("C:/Users/username/chromedriver.exe")
+driver = zl.init_driver("C:/Users/austi/Documents/Github_Repos/Imperial_Applied_Project/ChromeDriver/chromedriver.exe")
 
 # Go to www.zillow.com/homes
 zl.navigate_to_website(driver, "http://www.zillow.com/homes")
