@@ -69,7 +69,7 @@ feature importance values are charted in Plotly (2) to dynamically visualise the
 
 ![image](Detroit/Saved_Data/Photos/Model_Charts/True-pred-Zestimate.JPG)
 > Random forest model predictions against True and Zestimate home prices. 
-*The Zestimate price is indeed more accurate but was only able to produce estimated prices for 52% of the observed homes, showing that the Zestimate is a Quality vs. Quantity approach unlike the random forest modeling* 
+*The Zestimate price is indeed more accurate but was only able to produce estimated prices for 52% of the observed homes, showing that the Zestimate takes a Quality vs. Quantity approach unlike the random forest modeling* 
 
 ![image](Detroit/Saved_Data/Photos/Model_Charts/pdp.JPG)
 > The partial dependence plots show the relationship of home prices to the indepent variables shown
