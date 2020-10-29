@@ -1,4 +1,4 @@
-![ICBS Image](https://bs-main-prod.s3.amazonaws.com/business-school/wp-content/uploads/2015/07/ib-logo-retina.png)
+![icbs](https://poetsandquants.com/wp-content/uploads/sites/5/2018/03/IB_LOGO_RGB_POSITIVE_RED.jpg)
 
 <p align="center">
     <h1> Imperial College MSc. Finance 2019 Applied Project </h1>
